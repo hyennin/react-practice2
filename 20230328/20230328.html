@@ -12,10 +12,16 @@
         알림창입니다
         <button onclick="displayBtn('none')">알림창 닫기</button>
     </div>
-    <button onclick="displayBtn('block')">알림창 보여주세요</button>
+    <button id="btn1" onclick="menuBtn('아이디를 입력하세요')">아이디 버튼</button>
+    <button id="btn2" onclick="menuBtn('비밀번호를 입력하세요')">비밀번호 버튼</button>
     <script>
         const displayBtn = (select) => {
             document.getElementById('alert').style.display = select;
+        }
+
+        const menuBtn = (select) => {
+            document.getElementById('alert').innerText = select;
+            displayBtn('block');
         }
     </script>
 </body>
